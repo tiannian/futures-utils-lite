@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "futures-utils-lite",
+    "futures-macros-lite",
+]

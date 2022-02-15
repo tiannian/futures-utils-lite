@@ -12,7 +12,7 @@ readme = "../README.md"
 [dependencies]
 futures-lite = "1.12.0"
 
-futures-macros-lite = { path = "../futures-macros-lite" }
+futures-macros-lite = { path = "../futures-macros-lite", version = "0.1.0" }
 
 pin-project-lite = "0.2.8"
 

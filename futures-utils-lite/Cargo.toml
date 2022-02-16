@@ -1,6 +1,6 @@
 [package]
 name = "futures-utils-lite"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 description = "futures about utils in lite"
 license = "MIT"

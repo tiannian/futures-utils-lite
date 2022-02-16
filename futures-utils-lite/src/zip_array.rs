@@ -51,12 +51,12 @@ impl<T> Future for ZipArray<T> {
 
 pub fn zip_array<T, F>(fs: Vec<F>) -> ZipArray<T>
 where
-    F: Future<Output = T> + 'static,
+    F: Future<Output = T> + Send + 'static,
 {
     let mut arr = Vec::with_capacity(fs.len());
 
     for f in fs {
-        let fu: Pin<Box<dyn Future<Output = T>>> = Box::pin(f);
+        let fu: Pin<Box<dyn Future<Output = T> + Send>> = Box::pin(f);
         arr.push((fu, None));
     }
 

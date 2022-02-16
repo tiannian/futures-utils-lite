@@ -9,7 +9,7 @@ use pin_project_lite::pin_project;
 
 pin_project! {
     pub struct ZipArray<T> {
-        arr: Vec<(Pin<Box<dyn Future<Output = T>>>, Option<T>)>,
+        arr: Vec<(Pin<Box<dyn Future<Output = T> + Send>>, Option<T>)>,
     }
 }
 
